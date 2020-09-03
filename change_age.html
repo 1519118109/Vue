@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.min.js"></script>
+</head>
+<body>
+<div id="app" class="app">
+    <h3>{{age}}</h3>
+    <h3><input type="button" value="点击年龄加一" @click="add_age">
+    <input type="button" value="点击年龄减一" @click="del_age(1,2)"></h3>
+
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            age:20,
+        },
+        methods:{
+            add_age(a) {
+                this.age++;
+                console.log(a)
+            },
+            del_age(a,b) {
+                this.age--;
+                console.log((a+b))
+            },
+        },
+    })
+</script>
+</body>
+</html>

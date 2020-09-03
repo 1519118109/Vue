@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.min.js"></script>
+    <style>
+        .aa{
+            border: 5px red solid;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="app">
+    <h3>{{message}}</h3>
+    <hr>
+    <h3>{{age-1}}</h3>
+    <hr>
+    <h3 >{{choose}}11111</h3>
+    <hr>
+    <h3 v-text="choose" >11111</h3>
+    <hr>
+    <h3 v-text="compare" >11111</h3>
+    <hr>
+    <!--x-html是可以识别标签的-->
+    <h3 v-html="compare" >11111</h3>
+    <!--<hr>-->
+    <!--<h3>{{age}}</h3><input type="button" value="点击年龄减一" v-on:click="change_age">-->
+        <hr>
+    <h3>{{age}}</h3><input type="button" value="点击年龄减一" @click="change_age">
+    <hr>
+    <h3 v-show="isshow">v-show为真假</h3>
+    <input type="button" value="v-show点击" @click="show_click1">
+    <hr>
+    <h3 v-show="count>20">v-show低于20就不显示</h3>
+    <input type="button" value="v-show点击" @click="show_click2">
+    <hr>
+    <h3 v-if="true">v-if</h3>
+    <h3 v-else-if="true">v-else-if</h3>
+    <h3 v-else>v-else</h3>
+    <hr>
+    <img v-bind:src="src" title="这是x-bind绑定标签属性" v-bind:class="{aa:cssshow}">
+    <hr>
+    <h3 v-for="value in user">{{value}}</h3>
+    <ul>
+        <li v-for="(value,index) in users" :key="value.id">
+            {{index+1}}:{{value.name}}:{{value.age}}
+            <hr>
+        </li>
+    </ul>
+    <hr>
+    <input type="text" v-model="message">
+    <br>
+    <p>{{message}}</p>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message:'hello,world',
+            age:20,
+            choose:'v-text',
+            compare:'<a href="">这是用来比较x-text和x-html的a标签</a>',
+            isshow:true,
+            count:25,
+            src:'https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1328707912,4223993240&fm=26&gp=0.jpg',
+            cssshow:true,
+            user:{name:'张三',age:20},
+            users:[
+                {id:1,name:'张三',age:20},
+                {id:2,name:'李四',age:18},
+                {id:2,name:'王五',age:19},
+            ]
+        },
+        methods:{
+            change_age() {
+                this.age--;
+            },
+            show_click1(){
+                this.isshow = !this.isshow
+            },
+            show_click2(){
+                this.count--;
+            },
+        },
+    })
+</script>
+</body>
+</html>

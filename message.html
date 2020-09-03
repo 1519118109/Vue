@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.min.js"></script>
+</head>
+<body>
+<div id="app" class="app">
+    <input type="text" v-model="message">
+    <input type="button" value="点击发表留言" @click="addmessage()">
+    <ul>
+        <li v-for="(value, index) in messages" :key="index">
+            <span>{{value}}</span>
+            <a href="javascript:void(0);" @click="delmessage(index)">删除</a>
+        </li>
+    </ul>
+    <h3><input type="button" value="删除全部" @click="delall" v-show="messages.length!=0"></h3>
+    <h3>留言共：{{messages.length}}条</h3>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message:'',
+            messages:['留言2','留言1'],
+        },
+        methods:{
+            addmessage(){
+                let msg=this.message
+                if (msg){
+                    this.messages.unshift(this.message);
+                    message='';
+                }
+            },
+            delmessage(index){
+                this.messages.splice(index,1)
+            },
+            delall(){
+                this.messages=[];
+            }
+        },
+    })
+</script>
+</body>
+</html>
