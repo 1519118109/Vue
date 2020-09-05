@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <com1></com1>
+    <com2></com2>
+</div>
+<hr>
+<div id="main">
+    <com1></com1>
+    <com2></com2>
+</div>
+
+<script>
+    let com1 = {
+        template:`
+             <div>这是一个全局组件
+                <br>
+                <span>这是全局组件中的data：{{username}}</span>
+            </div>
+        `,
+        data:function () {
+            return{
+                username:'全局组件',
+            }
+        }
+    }
+    let com2 = {
+        template:`
+             <div>这是一个局部组件
+                <br>
+                <span>这是局部组件中的data：{{username}}</span>
+            </div>
+        `,
+        data:function () {
+            return{
+                username:'局部组件',
+        }
+        }
+    }
+    //全局组件在哪儿都可以用
+    Vue.component('com1',com1)
+
+    new Vue({
+        el:'#app',
+        data:{},
+        //局部组件只能在指定的作用域用
+        components:{
+            'com2':com2,
+        }
+
+    })
+    new Vue({
+        el:'#main',
+        data:{},
+
+    })
+</script>
+</body>
+</html>
