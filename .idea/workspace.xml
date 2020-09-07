@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bff0be43-3269-4170-8857-b44ca582bad7" name="Default Changelist" comment="新增了一个vue练习的文件">
-      <change afterPath="$PROJECT_DIR$/2-0计算属性与监听属性箭头函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2-3组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2-4props父传子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2-5this.$emit子传父.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3-1路由配置与拼接传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3-2路由配置与动态路由传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3-3路由配置与js跳转传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3-4localStorage数据存储.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vue-router.3.0.1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue_practice2.html" beforeDir="false" afterPath="$PROJECT_DIR$/2-1声明周期钩子.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +60,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\py_charm\Vue" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\py_charm\Vue" />
+      <recent name="F:\py_charm\Vue\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\py_charm\Vue" />
     </key>
   </component>
@@ -82,7 +83,9 @@
       <updated>1599126633742</updated>
       <workItem from="1599126635211" duration="9271000" />
       <workItem from="1599137346479" duration="1966000" />
-      <workItem from="1599286850950" duration="5589000" />
+      <workItem from="1599286850950" duration="7413000" />
+      <workItem from="1599441617953" duration="757000" />
+      <workItem from="1599472049471" duration="6989000" />
     </task>
     <task id="LOCAL-00001" summary="新增了一个vue练习的文件">
       <created>1599287021067</created>
@@ -107,12 +110,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增了一个vue练习的文件" />
     <option name="LAST_COMMIT_MESSAGE" value="新增了一个vue练习的文件" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="291" y="111" key="SettingsEditor" timestamp="1599478935887">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="291" y="111" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1599478935887" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1599293505652">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1599293505652" />
     <state x="136" y="199" key="run.anything.popup" timestamp="1599291195855">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <h3>这是主页的页头</h3>
+    <!-- 定义用户发起放访问不同组件的链接  通过to="/路由地址"来指定当前标签要访问的组件 -->
+    <router-link to="/index">访问系统首页</router-link>
+    <router-link to="/student">访问用户页</router-link>
+    <hr>
+
+    <!--  指定路由对应的组件出现的位置  -->
+    <router-view></router-view>
+
+</div>
+
+<!--在vue中路由是单独的模块，因此需要额外的引入vue路由的依赖-->
+<script src="js/vue.min.js"></script>
+<!--引入vue路由的依赖必须先引入vue-->
+<script src="js/vue-router.3.0.1.js"></script>
+<script>
+
+    let index = {
+        template: `
+            <div><h3>百知教育教育管理系统</h3>
+                <router-link to="/student/3/tom">点击传参拼接id和name</router-link>
+                <br>
+                <button @click="gostudent">js跳转传参</button>
+            </div>
+        `,
+        methods: {
+            gostudent(){
+                // 通过此方法跳转到student,跳转的方式不同，则接收的方式也不同
+                // this.$router.push("/com2?id=1");
+                // this.$router.push("/com2/1");
+                this.$router.push({path: "/student/2/tom"});
+            },
+        }
+    }
+
+    let student = {
+        template: `
+        <div><h3>学生管理列表</h3>
+            js传参用params接收index传递过来的id--->：{{ $route.params.id }}
+            <br>
+            js传参用params接收index传递过来的name--->：{{$route.params.name}}
+            <br>
+            <button @click="goBack">返回上一页</button>
+        </div>
+        `,
+        methods: {
+            // 返回上一页的页面
+            goBack(){
+                this.$router.go(-1);
+                // this.$router.push("/");
+            },
+        }
+    }
+
+
+    let myRouter = new VueRouter({
+        routes: [
+            // path指的是访问组件的地址  component代表这个地址对应的组件  一一对应
+            {path: "/index", component: index},
+            {path: "/student/", component: student},
+            {path: "/student/:id/:name", component: student},
+            {path:'/',component:index},//功能等价于{path:'/',redirect:"/index"},
+            {path:'/*',redirect:"/index"},
+        ],
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        // 将定义更好的路由注入到vue的实例中
+        router: myRouter,
+    })
+</script>
+</body>
+</html>
