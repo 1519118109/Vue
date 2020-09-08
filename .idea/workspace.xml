@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bff0be43-3269-4170-8857-b44ca582bad7" name="Default Changelist" comment="新增了一个vue练习的文件">
-      <change afterPath="$PROJECT_DIR$/3-1路由配置与拼接传参.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3-2路由配置与动态路由传参.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3-3路由配置与js跳转传参.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3-4localStorage数据存储.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/vue-router.3.0.1.js" afterDir="false" />
+    <list default="true" id="bff0be43-3269-4170-8857-b44ca582bad7" name="Default Changelist" comment="路由参数localStorage练习">
+      <change afterPath="$PROJECT_DIR$/4-1vuex的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vuex.3.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex的getters使用.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,14 +58,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\py_charm\Vue" />
-      <recent name="F:\py_charm\Vue\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\py_charm\Vue" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\py_charm\Vue\js" />
       <recent name="F:\py_charm\Vue" />
     </key>
   </component>
@@ -85,7 +83,9 @@
       <workItem from="1599137346479" duration="1966000" />
       <workItem from="1599286850950" duration="7413000" />
       <workItem from="1599441617953" duration="757000" />
-      <workItem from="1599472049471" duration="6989000" />
+      <workItem from="1599472049471" duration="8359000" />
+      <workItem from="1599488238610" duration="3208000" />
+      <workItem from="1599525618080" duration="2921000" />
     </task>
     <task id="LOCAL-00001" summary="新增了一个vue练习的文件">
       <created>1599287021067</created>
@@ -114,17 +114,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增了一个vue练习的文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增了一个vue练习的文件" />
+    <MESSAGE value="路由参数localStorage练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="路由参数localStorage练习" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="291" y="111" key="SettingsEditor" timestamp="1599478935887">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1599525641277">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="291" y="111" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1599478935887" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1599293505652">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1599525641277" />
+    <state x="291" y="111" key="SettingsEditor" timestamp="1599483344568">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1599293505652" />
+    <state x="291" y="111" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1599483344568" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1599483355669">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1599483355669" />
     <state x="136" y="199" key="run.anything.popup" timestamp="1599291195855">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
